@@ -470,7 +470,7 @@
         = COUNTDOWN CLOCK
     -------------------------------------------*/
     if ($("#clock").length) {
-        $('#clock').countdown('2017/12/25', function(event) {
+        $('#clock').countdown('2023/12/25', function(event) {
             var $this = $(this).html(event.strftime(''
             + '<div class="box"><div>%D</div> <span>Days</span> </div>'
             + '<div class="box"><div>%H</div> <span>Hours</span> </div>'
@@ -546,17 +546,17 @@
             },
 
             messages: {
-                name: "Please enter your name",
-                email: "Please enter your email",
-                guest: "Select your number of guest",
-                events: "Select your event list"
+                name: "Vui lòng điền tên của bạn",
+                email: "Vui lòng điền email của bạn",
+                guest: "Chọn số lượng người đi với bạn",
+                events: "Chọn danh sách sự kiện của bạn"
             },
 
             submitHandler: function (form) {
                 $("#loader").css("display", "inline-block");
                 $.ajax({
-                    type: "POST",
-                    url: "mail.php",
+                    type: "post",
+                    url: "Mail/sendmail.php",
                     data: $(form).serialize(),
                     success: function () {
                         $( "#loader").hide();
