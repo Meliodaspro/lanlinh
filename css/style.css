@@ -4064,3 +4064,9 @@ a:focus {
 }
 
 /*# sourceMappingURL=style.css.map */
+/* QRCODE CSS */
+.grid-qr {
+  color: #ffff;
+  opacity: 1;
+  text-align: center;
+}

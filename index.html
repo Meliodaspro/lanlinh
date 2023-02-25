@@ -740,50 +740,13 @@
                     </div>
                 </div> <!-- end section-title -->
 
-                <div class="row content">
-                    <div class="col col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                        <p>Vui lòng đặt trước ngày 16/12/2017.</p>
-                        <form id="rsvp-form" class="form validate-rsvp-form row" method="post">
-                            <div class="col col-sm-6">
-                                <input type="text" name="name" class="form-control" placeholder="Tên của bạn*">
-                            </div>
-                            <div class="col col-sm-6">
-                                <input type="email" name="email" class="form-control" placeholder="EMAIL của bạn*">
-                            </div>
-                            <div class="col col-sm-6">
-                                <select class="form-control" name="guest" >
-                                    <option disabled selected>Số Người Đi Cùng*</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                </select>
-                            </div>
-                            <div class="col col-sm-6">
-                                <select class="form-control" name="events" >
-                                    <option disabled selected>Mình Sẽ đến*</option>
-                                    <option>Mình sẽ đón dâu</option>
-                                    <option>Mình sẽ đưa dâu</option>
-                                    <option>Mình sẽ tham gia lại mặt 2 bên GĐ</option>
-                                </select>
-                            </div>
-                            <div class="col col-sm-12">
-                                <textarea class="form-control" name="notes" placeholder="Bạn có lời nhắn gì không*"></textarea>
-                            </div>
-                            <div class="col col-sm-12 submit-btn">
-                                <button type="submit" class="submit">Gửi lời mời</button>
-                                <span id="loader"><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i></span>
-                            </div>
-                            <div class="col col-md-12 success-error-message">
-                                <div id="success">Cảm ơn bạn nha</div>
-                                <div id="error"> Đã xảy ra lỗi khi gửi email. Vui lòng thử lại sau. </div>
-                            </div>
-                        </form>
-                    </div>
-                </div> <!-- end row -->
-            </div> <!-- end container -->
-        </section>
-        <!-- end rsvp-section -->
+
+            <div class="grid-qr">
+                <div class="img-qr">
+                    <a href="images/qrcode.jpg" class="popup-image">
+                        <img src="images/qrcode.jpg" alt class="img img-responsive">
+                    </a>
+                </div>
 
 
         <!-- start getting-there-section -->
@@ -881,6 +844,9 @@
 
     <!-- Plugins for this template -->
     <script src="js/jquery-plugin-collection.js"></script>
+
+    <!-- Plugins QRCODE -->
+    <script type="text/javascript" src="QRCODE/qrcode.min.js"></script>
 
     <!-- Custom script for this template -->
     <script src="js/script.js"></script>
