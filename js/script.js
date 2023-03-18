@@ -470,12 +470,12 @@
         = COUNTDOWN CLOCK
     -------------------------------------------*/
     if ($("#clock").length) {
-        $('#clock').countdown('2023/12/25', function(event) {
+        $('#clock').countdown('2023/04/11', function(event) {
             var $this = $(this).html(event.strftime(''
-            + '<div class="box"><div>%D</div> <span>Days</span> </div>'
-            + '<div class="box"><div>%H</div> <span>Hours</span> </div>'
-            + '<div class="box"><div>%M</div> <span>Mins</span> </div>'
-            + '<div class="box"><div>%S</div> <span>Secs</span> </div>'));
+            + '<div class="box"><div>%D</div> <span>Ngày</span> </div>'
+            + '<div class="box"><div>%H</div> <span>Giờ</span> </div>'
+            + '<div class="box"><div>%M</div> <span>Phút</span> </div>'
+            + '<div class="box"><div>%S</div> <span>Giây</span> </div>'));
         });
     }
 
@@ -546,17 +546,17 @@
             },
 
             messages: {
-                name: "Vui lòng điền tên của bạn",
-                email: "Vui lòng điền email của bạn",
-                guest: "Chọn số lượng người đi với bạn",
-                events: "Chọn danh sách sự kiện của bạn"
+                name: "Please enter your name",
+                email: "Please enter your email",
+                guest: "Select your number of guest",
+                events: "Select your event list"
             },
 
             submitHandler: function (form) {
                 $("#loader").css("display", "inline-block");
                 $.ajax({
-                    type: "post",
-                    url: "Mail/sendmail.php",
+                    type: "POST",
+                    url: "mail.php",
                     data: $(form).serialize(),
                     success: function () {
                         $( "#loader").hide();
